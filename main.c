@@ -6,46 +6,62 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:11:15 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/01 11:34:00 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/01 17:37:54 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "./libft/libft.h"
-#include  "libftprintf.h"
+#include "./libft/libft.h"
+#include "libftprintf.h"
 #include <libc.h>
 
-
-int ft_printf(const char *string,...)
+int check_format()
 {
-	va_list arg_list;
-
-	va_start(arg_list,string);
-
-	while (*string != '%')
-	{
-		ft_putchar(*string);
-		string++;
-	}
-	if (*(string+1) =='d')
-	{
-		int n = va_arg(arg_list,int);
-		ft_putnbr(n);
-	}
-	if (*(string+1) =='d')
-	{
-		int n = va_arg(arg_list,int);
-		ft_putnbr(n);
-	}
-	va_end(arg_list);
-	return 0;
+	
 }
 
 
 
+
+
+
+int ft_printf(const char *string, ...)
+{
+	va_list arg_list;
+	char *str;
+	int n;
+	int i;
+	int num;
+
+	i = 0;
+	num = 0;
+	va_start(arg_list, string);
+	while (string[i] != '\0')
+	{
+
+		if (string[i] == '%')
+		{
+			if (string[i + 1] == 's')
+			{
+				str = va_arg(arg_list, char *);
+				num += ft_putstr(str);
+			}
+			if (string[i + 1] == 'd')
+			{
+				n = va_arg(arg_list, int);
+				num += ft_putnbr(n);
+			}
+		}
+		num += ft_putchar(string[i]);
+		i++;
+	}
+	va_end(arg_list);
+	return (i);
+}
+
 int main(int argc, char const *argv[])
 {
-	// ft_printf("Hello habibi %d%%",45);
+	// printf("%d",printf("HELLO %s","amin"));
 	// printf("Hello, my name is %s, I'm %d years old \n My Name starts with %c , my name's address is %p \n I weigh %f Kilograms and stand at %i meters.","Sarah",26,'c',&"Sarah", 57.89,178);
-	ft_printf("Hello, my name is %s, I'm %d years old \n My Name starts with %c , my name's address is %p \n I weigh %f Kilograms and stand at %i meters.","Sarah",26,'c',&"Sarah", 57.89,178);
+	ft_printf("Hello, my name is %s,", "Sarah");
 	return 0;
 }

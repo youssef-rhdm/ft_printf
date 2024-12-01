@@ -6,7 +6,7 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:11:30 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/11/26 14:33:00 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/01 17:47:33 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@
 # include <stdarg.h>
 
 int	ft_printf(const char *, ...);
-
 int	ft_putchar(char c);
+int	ft_putstr_p(char *str);
 int	ft_putstr(char *str);
 int	ft_putnbr(int n);
+int	check_format(va_list a, const char str);
 
 #endif

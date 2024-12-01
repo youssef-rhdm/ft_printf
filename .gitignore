@@ -1,6 +1,6 @@
 /.vscode
 *.tldr
-libftprintf.a
+*.a
 *.pdf
 a.out
 /libft

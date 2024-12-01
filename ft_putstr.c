@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 14:08:55 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/01 10:50:34 by yrhandou         ###   ########.fr       */
+/*   Created: 2024/12/01 13:14:56 by yrhandou          #+#    #+#             */
+/*   Updated: 2024/12/01 13:15:06 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putstr(char *str)
+int ft_putstr(char *str)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (str[i] != '\0')
