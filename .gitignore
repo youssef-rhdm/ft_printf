@@ -1,0 +1,6 @@
+/.vscode
+*.tldr
+libftprintf.a
+*.pdf
+a.out
+/libft
