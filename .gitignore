@@ -1,6 +1,6 @@
-# /.vscode
-# *.tldr
-# *.a
-# *.pdf
-# a.out
-# /libft
+*.a
+*.pdf
+a.out
+/libft
+/*.dSYM
+

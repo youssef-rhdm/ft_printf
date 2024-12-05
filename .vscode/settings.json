@@ -1,10 +1,12 @@
 {
 	"files.associations": {
-		"*.ejs": "html",
 		"*.html": "html",
 		"*.js": "javascript",
 		"*.css": "css",
 		"*.php": "php",
-		"libftprintf.h": "c"
+		"ios": "c",
+		"libftprintf.h": "c",
+		"libc.h": "c",
+		"stdarg.h": "c"
 	}
 }
