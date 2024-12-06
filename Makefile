@@ -9,7 +9,7 @@ all :$(NAME)
 $(NAME): $(OBJ)
 	ar -rc $(NAME) $^
 
-%.o : %.c libftprintf.h
+%.o : %.c ft_printf.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
 re: fclean all

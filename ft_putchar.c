@@ -6,11 +6,11 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 14:07:28 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/01 13:11:23 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/06 16:59:27 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int ft_putchar(char c)
 {

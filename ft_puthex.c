@@ -6,11 +6,11 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 11:29:50 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/06 15:27:20 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/06 17:00:35 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static int count_digits(unsigned int nbr)
 {

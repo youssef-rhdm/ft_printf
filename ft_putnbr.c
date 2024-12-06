@@ -6,11 +6,11 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 14:10:28 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/01 10:51:30 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/06 17:00:35 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static int count_num(int num)
 {

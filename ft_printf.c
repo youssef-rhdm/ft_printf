@@ -22,7 +22,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static int check_format(va_list va, const char *str, int *counter)
 {
@@ -43,7 +43,7 @@ static int check_format(va_list va, const char *str, int *counter)
 	else if (*str == 'X')
 		counter += ft_putstr("UPPER HEX");
 	else if (*str == '%')
-		counter += ft_putchar(*str);
+		counter += ft_putchar('%');
 	return *counter;
 }
 
@@ -81,13 +81,15 @@ int ft_printf(const char *str, ...)
 	while (str[i])
 	{
 		if (str[i]=='%')
+		{
 			counter += check_format(va ,&str[++i], &counter);
+			i++;
+		}
 		counter+= ft_putchar(str[i]);
 		i++;
 	}
 	return counter;
 }
-#include "libftprintf.h"
 #include <libc.h>
 
 int main(void)

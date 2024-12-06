@@ -6,17 +6,17 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:11:15 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/01 17:37:54 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/06 17:00:35 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <libc.h>
 
 int check_format()
 {
-	
+
 }
 
 
