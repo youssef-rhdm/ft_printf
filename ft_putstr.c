@@ -6,7 +6,7 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 13:14:56 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/01 13:15:06 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/06 16:56:07 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_putstr(char *str)
 {
-	int i;
+	int i; 
 
 	i = 0;
 	while (str[i] != '\0')
