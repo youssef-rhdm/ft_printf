@@ -6,7 +6,7 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 11:29:50 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/05 15:47:30 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/06 15:27:20 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,16 @@ int ft_puthex(unsigned int nbr, int type)
 		hex_list = "0123456789ABCDEF";
 	else
 		hex_list = "0123456789abcdef";
-	if (nbr > 16)
-		count += ft_puthex(nbr / 16, type);
-	else if (nbr > 0)
+	while (nbr > 16)
 	{
-		count = ft_putchar(hex_list[nbr]);
+		count += ft_puthex(nbr % 16, type);
+		nbr = nbr / 16;
 	}
-	else if (nbr == 0)
-		count += ft_putchar('0');
+	if (nbr <= 9)
+		count = ft_putchar(hex_list[nbr]);
+	else if (nbr > 9)
+	{
+		count += ft_putchar(hex_list[nbr]);
+	}
 	return count;
 }
