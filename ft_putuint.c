@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*   ft_putuint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 11:29:50 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/07 11:56:22 by yrhandou         ###   ########.fr       */
+/*   Created: 2024/12/07 11:45:38 by yrhandou          #+#    #+#             */
+/*   Updated: 2024/12/07 11:53:09 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthex(unsigned long nbr, int type)
+int	ft_putuint(unsigned int n)
 {
-	int		count;
-	char	*hex_list;
+	int	count;
 
 	count = 0;
-	if (type == 1)
-		hex_list = "0123456789ABCDEF";
-	else if (type == 0)
-		hex_list = "0123456789abcdef";
-	if (nbr > 15)
+	if (n > 9)
 	{
-		count += ft_puthex(nbr / 16, type);
-		count += ft_puthex(nbr % 16, type);
+		count += ft_putuint(n / 10);
+		count += ft_putuint(n % 10);
 	}
 	else
-		count += ft_putchar(hex_list[nbr]);
+	{
+		count += ft_putchar(n + 48);
+	}
 	return (count);
 }

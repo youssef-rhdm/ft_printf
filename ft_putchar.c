@@ -6,13 +6,13 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 14:07:28 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/06 16:59:27 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/07 11:56:03 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	return (write(1, &c, 1));
 }

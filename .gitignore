@@ -3,4 +3,4 @@
 a.out
 /libft
 /*.dSYM
-
+.DS_Store

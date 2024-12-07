@@ -6,16 +6,18 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/01 13:14:56 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/06 17:00:35 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/07 11:57:12 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putstr(char *str)
+int	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
+	if (!str)
+		return (write(1, "(null)", 6));
 	i = 0;
 	while (str[i] != '\0')
 	{
