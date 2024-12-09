@@ -1,19 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 12:11:15 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/07 11:57:33 by yrhandou         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	main(int argc, char const *argv[])
+int main()
 {
-	ft_printf("Hello, my name is %s,", "Sarah");
-	return (0);
+	ft_printf("%i");
+	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: yrhandou <yrhandou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:11:30 by yrhandou          #+#    #+#             */
-/*   Updated: 2024/12/07 11:55:48 by yrhandou         ###   ########.fr       */
+/*   Updated: 2024/12/09 15:44:20 by yrhandou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-int	ft_printf(const char *str, ...);
+int	ft_printf(const char *, ...);
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_putptr(void *ptr);

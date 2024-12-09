@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <libc.h>
 
 static int	check_format(va_list va, char str)
 {
@@ -36,30 +35,10 @@ static int	check_format(va_list va, char str)
 		counter += ft_puthex(va_arg(va, unsigned int), 1);
 	else if (str == '%')
 		counter += ft_putchar('%');
+	else
+		counter += ft_putchar(str);
 	return (counter);
 }
-
-// int ft_printf_old(const char *str, ...)
-// {
-// 	va_list va;
-// 	int i;
-// 	int count;
-
-// 	i = 0;
-// 	count = 0;
-// 	va_start(va, str);
-// 	while (str[i] != '\0')
-// 	{
-// 		if (str[i] == '%')
-// 			count = check_format(va, &str[++i], &count);
-// 		else
-// 			ft_putchar(str[i]);
-// 		i++;
-// 		count++;
-// 	}
-// 	va_end(va);
-// 	return (i);
-// }
 
 int	ft_printf(const char *str, ...)
 {
@@ -80,5 +59,6 @@ int	ft_printf(const char *str, ...)
 			counter += check_format(va, str[++i]);
 		i++;
 	}
+	va_end(va);
 	return (counter);
 }
