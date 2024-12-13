@@ -22,19 +22,13 @@ static int	check_format(va_list va, char str)
 	else if (str == 'c')
 		counter += ft_putchar(va_arg(va, int));
 	else if (str == 'p')
-		counter += ft_putptr(va_arg(va, void *));
-	else if (str == 'd')
-		counter += ft_putnbr(va_arg(va, int));
-	else if (str == 'i')
+		counter += ft_putptr(va_arg(va, void *), 'x');
+	else if (str == 'd' || str == 'i')
 		counter += ft_putnbr(va_arg(va, int));
 	else if (str == 'u')
 		counter += ft_putuint(va_arg(va, unsigned int));
-	else if (str == 'x')
-		counter += ft_puthex(va_arg(va, unsigned int), 0);
-	else if (str == 'X')
-		counter += ft_puthex(va_arg(va, unsigned int), 1);
-	else if (str == '%')
-		counter += ft_putchar('%');
+	else if (str == 'x' || str == 'X')
+		counter += ft_puthex(va_arg(va, unsigned int), str);
 	else
 		counter += ft_putchar(str);
 	return (counter);
